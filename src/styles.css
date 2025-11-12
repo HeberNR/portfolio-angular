@@ -1,1 +1,69 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;900&family=Playfair+Display:wght@700&family=Space+Mono:wght@700&family=Open+Sans:wght@400;700&display=swap');
+
+:root {
+  /* Paleta de Colores */
+  --color-fondo-principal: #0a0a0a;
+  --color-fondo-secundario: #272727;   /* Para Header/Footer */
+  --color-borde-sutil: #333;
+  --color-texto-principal: #a0a0a0;
+  --color-texto-secundario: #ffffff; /* Para cosas que deben ser blanco puro */
+  --color-acento: #ff6b35;      
+
+  /* Tipografías */
+  --fuente-principal: 'Montserrat', sans-serif; /* Para párrafos (Moderno) */
+  --fuente-mono: 'Space Mono', monospace;     /* Para acentos "tech" */
+  
+  /* Tamaños */
+  --padding-header: 1rem 2rem;
+}
+
+/* --- Reseteo Básico --- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* --- Estilos Globales del Body --- */
+body {
+  background-color: var(--color-fondo-principal); 
+  color: var(--color-texto-principal); 
+  font-family: var(--fuente-principal);
+}
+
+/* Estilo global para todos los enlaces */
+a {
+  color: var(--color-texto-principal);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--color-acento); 
+}
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+app-home,
+app-sobre-mi,
+app-mis-proyectos,
+app-habilidades,
+app-contacto {
+  display: block;
+  width: 100%;
+  animation: fadeIn 0.4s ease-in-out;
+}

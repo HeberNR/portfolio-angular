@@ -1,0 +1,88 @@
+.about-section {
+  padding-top: 4rem; 
+  padding-bottom: 4rem;
+}
+.section-title {
+  font-family: var(--fuente-principal);
+  font-weight: 900;
+  font-size: 2.5rem;
+  color: var(--color-texto-secundario);
+  margin-bottom: 2rem;
+  position: relative;
+}
+.section-title::after {
+  content: '';
+  display: block;
+  width: 50px;
+  height: 4px;
+  background-color: var(--color-acento);
+  margin-top: 8px;
+}
+.about-content {
+  display: flex;
+  gap: 3rem;
+}
+.about-text {
+  flex: 2;
+  min-width: 300px;
+}
+.bio-text {
+  font-family: var(--fuente-principal);
+  font-size: 1rem;
+  color: var(--color-texto-principal);
+  line-height: 1.7;
+  white-space: pre-line;
+}
+.about-info {
+  flex: 1;
+  min-width: 280px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.info-card {
+  background-color: var(--color-borde-sutil); 
+  padding: 1.5rem;
+  border-radius: 12px;
+  transition: transform 0.3s ease;
+}
+.info-card:hover {
+   transform: translateY(-5px);
+}
+.info-card h3 {
+  font-family: var(--fuente-principal);
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: var(--color-acento);
+  margin-bottom: 1rem;
+}
+.info-card-main {
+  font-family: var(--fuente-principal);
+  font-size: 1rem;
+  color: var(--color-texto-secundario);
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+.info-card-sub {
+  font-family: var(--fuente-principal);
+  font-size: 0.9rem;
+  color: var(--color-texto-principal);
+}
+
+@media (max-width: 768px) {
+  .about-content {
+    flex-direction: column;
+  }  
+  .section-title {
+    font-size: 2rem;
+  }
+  .about-text, .about-info {
+    min-width: auto;
+  }
+}
+.cargando {
+    text-align: center;
+    padding: 4rem;
+    font-size: 1.5rem;
+    color: var(--color-acento);
+}

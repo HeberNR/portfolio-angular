@@ -1,0 +1,21 @@
+<section id="habilidades" class="skills-section">
+
+    <h2 class="section-title">Habilidades</h2>
+
+    <div class="skills-grid">
+        @for (dato of misDatos; track dato.categoria ) {
+
+            <article class="skill-card">
+                <h3> {{ dato.categoria }}</h3>
+
+                <ul>
+                    @for (tec of dato.tecnologias; track tec) {
+                        <li> {{ tec }}</li>
+                    }
+                </ul>
+            </article>
+        } @empty {
+            <p class="cargando">Cargando habilidades...</p>
+        }
+    </div>
+</section>

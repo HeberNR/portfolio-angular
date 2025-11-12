@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1,
+    "titulo": "Gestor de Turnos",
+    "descripcion": "Aplicación CRUD desarrollada con Java, JSP y Servlets para la gestión de turnos.",
+    "imagen": "assets/proyecto-gestion-turnos.png",
+    "tecnologias": ["Java", "JSP", "Servlets", "MySQL"],
+    "linkRepositorio": "https://github.com/HeberNR/GestionTurnos",
+    "asignatura": "Práctica Profesionalizante I",
+    "docente": "Mauro Elio Hernán Ramírez"
+  },
+  {
+    "id": 2,
+    "titulo": "Portfolio Personal",
+    "descripcion": "Sitio web personal desarrollado con Angular, consumiendo datos desde archivos JSON.",
+    "imagen": "assets/proyecto-portfolio.png",
+    "tecnologias": ["Angular", "TypeScript", "CSS Grid", "JSON"],
+    "linkRepositorio": "https://github.com/HeberNR/portfolio-angular",
+    "asignatura": "Programación I",
+    "docente": "Analía Casali"
+  }
+]

@@ -1,0 +1,54 @@
+.footer-container {
+  /* Usamos el color de fondo secundario que definiste */
+  background-color: var(--color-fondo-secundario);
+  color: var(--color-texto-principal); /* Gris claro */
+  padding: 3rem 1rem 2rem 1rem;
+  text-align: center;
+}
+
+/* --- 1. Iconos Sociales --- */
+.footer-social {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem; /* Espacio entre iconos */
+  margin-bottom: 2rem;
+}
+
+.footer-social a {
+  /* El color lo hereda del .footer-container */
+  color: var(--color-texto-principal);
+  transition: all 0.3s ease;
+}
+
+.footer-social a svg {
+  /* Tamaño de los iconos */
+  width: 24px;
+  height: 24px;
+  fill: currentColor; /* El SVG toma el color del <a> */
+}
+
+/* Efecto hover naranja para los iconos */
+.footer-social a:hover {
+  color: var(--color-acento);
+  transform: translateY(-3px); /* Eleva el icono un poco */
+}
+
+
+/* --- 2. Línea Divisoria --- */
+.footer-divider {
+  border: none; /* Quitamos el borde por defecto */
+  height: 1px;
+  /* Usamos tu color de borde sutil */
+  background-color: var(--color-borde-sutil);
+  width: 90%;
+  max-width: 600px; /* Un ancho máximo */
+  margin: 0 auto 1.5rem auto; /* Centra y da espacio */
+}
+
+
+/* --- 3. Texto de Copyright --- */
+.footer-copyright p {
+  font-size: 0.9rem;
+  color: var(--color-texto-principal);
+  margin: 0;
+}

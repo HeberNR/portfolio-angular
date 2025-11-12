@@ -1,0 +1,88 @@
+<section id="contacto" class="contact-section">
+  
+  <h2 class="section-title">Contacto</h2>
+  
+  <div class="contact-content">
+    
+    <div class="contact-info">
+      <h3>¿Tienes un proyecto en mente?</h3>
+      <p class="intro-text">
+        Me gustaría saber de ti. Déjame un mensaje y 
+        responderé lo antes posible.
+      </p>
+      
+      @if (misDatos) {
+        <ul class="info-list">
+          <li>
+            <div class="info-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M0 3v18h24v-18h-24zm21.518 2l-9.518 7.713-9.518-7.713h19.036zm-19.518 14v-11.817l10 8.107 10-8.107v11.817h-20z"/></svg>
+            </div>
+            <div class="info-text">
+              <h4>Email</h4>
+              <a [href]="'mailto:' + misDatos.email">{{ misDatos.email }}</a>
+            </div>
+          </li>
+          
+          <li>
+            <div class="info-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M6.176 1.322l2.844 2.844c.275.275.275.722 0 .998l-1.057 1.056c1.031 1.769 2.384 3.122 4.153 4.153l1.056-1.057c.275-.275.722-.275.998 0l2.844 2.844c.275.275.275.722 0 .998l-1.056 1.056c-1.258 1.258-2.673 2.115-4.21 2.451-1.396.305-2.831.066-4.103-.518-1.423-.653-2.69-1.611-3.765-2.686s-2.033-2.342-2.686-3.765c-.583-1.272-.822-2.707-.518-4.103.336-1.537 1.194-2.952 2.451-4.21l1.056-1.056c.275-.275.722-.275.998 0z"/></svg>
+            </div>
+            <div class="info-text">
+              <h4>Teléfono</h4>
+              <span>{{ misDatos.telefono }}</span>
+            </div>
+          </li>
+
+          <li>
+            <div class="info-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-4.198 0-8 3.403-8 7.602 0 4.198 3.469 9.21 8 16.398 4.531-7.188 8-12.2 8-16.398 0-4.199-3.801-7.602-8-7.602zm0 11c-1.657 0-3-1.343-3-3s1.343-3 3-3 3 1.343 3 3-1.343 3-3 3z"/></svg>
+            </div>
+            <div class="info-text">
+              <h4>Ubicación</h4>
+              <span>{{ misDatos.ubicacion }}</span>
+            </div>
+          </li>
+        </ul>
+      }
+    </div>
+
+    <div class="contact-form">
+      <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+        
+        <div class="form-group">
+          <label for="nombre">Nombre</label>
+          <input type="text" id="nombre" formControlName="nombre" placeholder="Tu nombre">
+          @if (f['nombre'].invalid && f['nombre'].touched) {
+            <div class="error-message">El nombre es requerido.</div>
+          }
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" formControlName="email" placeholder="tu@email.com">
+          @if (f['email'].invalid && f['email'].touched) {
+            <div class="error-message">
+              @if (f['email'].errors?.['required']) { <span>El email es requerido.</span> }
+              @if (f['email'].errors?.['email']) { <span>El formato del email no es válido.</span> }
+            </div>
+          }
+        </div>
+
+        <div class="form-group">
+          <label for="mensaje">Mensaje</label>
+          <textarea id="mensaje" formControlName="mensaje" rows="6" placeholder="Tu mensaje aquí..."></textarea>
+          @if (f['mensaje'].invalid && f['mensaje'].touched) {
+            <div class="error-message">El mensaje es requerido.</div>
+          }
+        </div>
+
+        <button type="submit" class="btn-submit" [disabled]="contactForm.invalid">
+          Enviar Mensaje
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M0 12l11 3.1 7-8.1-8.1 7 3.1 11 12-22z"/></svg>
+        </button>
+
+      </form>
+    </div>
+    
+  </div>
+</section>

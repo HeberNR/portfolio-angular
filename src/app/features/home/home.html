@@ -1,0 +1,23 @@
+@if (misDatos) {
+    <section class="sobre-mi-container">
+
+        <div class="text-column">
+            <h1 class="nombre">Hola, soy {{ misDatos.nombre }}</h1>
+            <h2 class="titulo-seccion">{{ misDatos.titulo }}</h2>
+            <h3 class="subtitulo">{{ misDatos.subtitulo }}</h3>
+            <p class="parrafo-bio">{{ misDatos.descripcion }}</p>
+
+            <div class="mis-botones">
+                <a routerLink="/misproyectos" class="btn btn-primary">Ver Proyectos &rarr;</a>
+                <a routerLink="/contacto" class="btn btn-secondary">Contactarme</a>
+            </div>
+        </div>
+
+        <div class="image-column">
+            <img [src]="misDatos.foto" alt="Foto de perfil" class="foto-perfil">
+        </div>
+
+    </section>    
+} @else {
+    <p class="cargando">Cargando datos...</p>
+}

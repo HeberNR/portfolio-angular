@@ -1,0 +1,32 @@
+@if (misDatos) {
+  <section id="sobre-mi" class="about-section">
+    
+    <h2 class="section-title">Sobre mi</h2>
+
+    <div class="about-content">
+      
+      <div class="about-text">
+        <p class="bio-text">{{ misDatos.bio }}</p>
+      </div>
+
+      <div class="about-info">
+        
+        <article class="info-card">
+          <h3>Educación</h3>
+          <p class="info-card-main">{{ misDatos.titulo }}</p>
+          <p class="info-card-sub">{{ misDatos.Institucion }}</p>
+        </article>
+
+        <article class="info-card">
+          <h3>Experiencia</h3>
+          <p class="info-card-main">Proyectos Académicos y Personales</p>
+          <p class="info-card-sub">Enfocado en aplicar buenas prácticas y código limpio</p>
+        </article>
+
+      </div>
+    </div>
+  </section>
+  
+} @else {
+  <p class="cargando">Cargando datos...</p>
+}

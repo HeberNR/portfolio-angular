@@ -1,0 +1,34 @@
+[
+  {
+    "categoria": "Frontend",
+    "tecnologias": [
+      "Angular 17+",
+      "JavaScript",
+      "TypeScript",
+      "CSS",
+      "HTML5"
+    ]
+  },
+  {
+    "categoria": "Backend",
+    "tecnologias": [
+      "Java",
+      "JSP (Java Server Pages)",
+      "Servlets",
+      "Python"
+    ]
+  },
+  {
+    "categoria": "Tools",
+    "tecnologias": [
+      "Git",
+      "GitHub"
+    ]
+  },
+  {
+    "categoria": "Bases de Datos",
+    "tecnologias": [
+      "MySQL"
+    ]
+  }
+]
